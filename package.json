@@ -4,7 +4,7 @@
   "description": "",
   "main": "functions/app.js",
   "scripts": {
-    "build": "netlify-lambda build src",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' netlify-lambda build src",
     "start": "nodemon server-local.js"
   },
   "author": "",
