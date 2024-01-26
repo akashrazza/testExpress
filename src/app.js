@@ -9,8 +9,8 @@ const mongoose = require('mongoose');
 app.use(express.json()); 
 app.use(cors()); 
 connect();
-const router = express.Router();
-router.get('/question',async (req,res)=>{
+// const router = express.Router();
+app.get('/question',async (req,res)=>{
     try{
         const Data = await QuestionModel.find();
         res.status(200).json(Data);
@@ -30,7 +30,7 @@ async function connect(){
         console.log(err);
     }
 }
-router.post('/question',async (req,res)=>{
+app.post('/question',async (req,res)=>{
     try{
         const Data = await QuestionModel.create(req.body);
         res.status(201).json(Data);
