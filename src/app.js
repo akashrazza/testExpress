@@ -55,7 +55,7 @@ router.post('/question',async (req,res)=>{
 // });
 app.get("/", (req, res) => res.type('html').send(html));
 
-const server = app.listen(3001,'0.0.0.0' () => console.log(`Example app listening on port 3001`));
+const server = app.listen(3001,'0.0.0.0', () => console.log(`Example app listening on port 3001`));
 
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
