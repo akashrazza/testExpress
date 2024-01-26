@@ -5,7 +5,7 @@
   "main": "functions/app.js",
   "scripts": {
     "build": "NODE_OPTIONS='--openssl-legacy-provider' netlify-lambda build src",
-    "start": "nodemon server-local.js"
+    "start": "node src/app.js"
   },
   "author": "",
   "license": "ISC",
